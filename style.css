@@ -1,0 +1,80 @@
+body {
+    background-color: bisque;
+    width: 414px;
+}
+
+header {
+    width: 414px;
+    background-color: #CF2B2B;
+    height: 92px;
+    position: fixed;
+    top: 0;
+}
+
+main {
+    width: 414px;
+    box-sizing: border-box;
+    padding-top: 92px;
+    padding-bottom: 116px;
+}
+
+footer {
+    background-color: cadetblue;
+    width: 414px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.linha {
+    display: flex;
+    overflow-x: scroll;
+    gap: 16px;
+    padding: 0 19px;
+    box-sizing: border-box;
+}
+
+.linha::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    box-sizing: border-box;
+    background-color: cyan;
+    width: 172px;
+    height: 216px;
+    padding: 14px;
+    border-radius: 9px;
+}
+
+.card-imagem {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 44px;
+    padding-left: 21px;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 26px;
+    padding-left: 21px;
+    margin-top: 31px;
+    margin-bottom: 17px;
+}
+
+
+
+.botao {
+    width: 316px;
+    height: 61px;
+    border-radius: 50px;
+    border: none;
+}
