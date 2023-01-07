@@ -21,6 +21,10 @@ main {
     padding-bottom: 116px;
 }
 
+section {
+    box-sizing: border-box;
+}
+
 footer {
     background-color: #FFFFFF;
     width: 100%;
@@ -58,7 +62,7 @@ footer {
     width: 144px;
     height: 87px;
     border-radius: 4px;
-    box-shadow: 0 0 3px 0 #bababa;
+    box-shadow: 0 0 2px 0 #bababa;
 }
 
 h1 {
@@ -99,5 +103,38 @@ p {
     height: 61px;
     border-radius: 50px;
     border: none;
-    color: #CBCBCB;
+    background-color: #CBCBCB;
+    color: #FFFFFF;
+    font-family: 'roboto';
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.title {
+    font-family: 'roboto';
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+    padding-top: 8px;
+}
+
+.description {
+    font-family: 'roboto';
+    font-weight: 300;
+    font-size: 15px;
+    color: #A6A6A6;
+}
+
+.price {
+    font-family: 'roboto';
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.card-content {
+    height: calc(100% - 87px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
