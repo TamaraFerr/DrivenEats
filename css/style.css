@@ -109,11 +109,16 @@ h2 {
     height: 61px;
     border-radius: 50px;
     border: none;
-    background-color: #CBCBCB;
+    background-color: #32B72F;
     color: #FFFFFF;
     font-family: 'roboto';
-    font-weight: 400;
+    font-weight: 700;
     font-size: 20px;
+}
+
+.botao:disabled {
+    background-color: #CBCBCB;
+    font-weight: 400;
 }
 
 .title {
