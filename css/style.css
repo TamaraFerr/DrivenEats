@@ -12,6 +12,7 @@ header {
     top: 0;
     box-sizing: border-box;
     box-shadow: 2px 3px 5px 2px #A9A9A9;
+    z-index: 3;
 }
 
 main {
@@ -58,6 +59,14 @@ footer {
     box-shadow: 0 0 3px 0 #bababa;
 }
 
+.card.selected-card {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+}
+
+.card.selected-card>.card-content>.price-check>.icon{
+    display: block;
+}
+
 .card-imagem {
     width: 144px;
     height: 87px;
@@ -85,9 +94,6 @@ h2 {
     color: #333333;
 }
 
-p {
-    font-weight: ;
-}
 
 .subtitulo {
     font-family: 'roboto';
@@ -125,6 +131,16 @@ p {
     color: #A6A6A6;
 }
 
+.price-check {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    color: #32B72F;
+    display: none;
+}
+
 .price {
     font-family: 'roboto';
     font-weight: 400;
@@ -138,3 +154,4 @@ p {
     flex-direction: column;
     justify-content: space-between;
 }
+
