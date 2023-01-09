@@ -2,6 +2,12 @@ let comida = null
 let bebida = null
 let sobremesa = null
 
+const formataMoeda = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  
+});
+
 //seleciona o item do pedido e marca com a borda e check, verifica cada categoria clicada.
 function selecionaCard(el) {
     let categoria = el.dataset.test;
@@ -39,14 +45,17 @@ function podePedir() {
     }
 }
 //envia a mensagem de confirmação de pedido pelo whatsapp
-function mandaPedido(el) {
+function mandaPedido() {
+    
     let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido: 
-    - Prato: Frango Yin Yang 
-    - Bebida: Coquinha Gelada 
-    - Sobremesa: Pudim 
-    Total: R$ 00,00`);
-    console.log(el);
-
+    - Prato: ${comida.children[1].children[0].innerHTML}
+    - Bebida: ${bebida.children[1].children[0].innerHTML}
+    - Sobremesa: ${sobremesa.children[1].children[0].innerHTML}
+    Total: ${totalPedido()}`);
     window.location.href = `https://wa.me/5521982519042?text=${mensagem}`
     
+}
+
+function totalPedido() {
+    return formataMoeda.format(parseFloat(comida.dataset.price) + parseFloat(bebida.dataset.price) + parseFloat(sobremesa.dataset.price));
 }
