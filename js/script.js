@@ -40,14 +40,13 @@ function podePedir() {
 }
 //envia a mensagem de confirmação de pedido pelo whatsapp
 function mandaPedido(el) {
-    let str = `Olá, gostaria de fazer o pedido: 
+    let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido: 
     - Prato: Frango Yin Yang 
     - Bebida: Coquinha Gelada 
     - Sobremesa: Pudim 
-    Total: R$ 00,00`;
-
+    Total: R$ 00,00`);
     console.log(el);
 
-    window.location.href = 'https://wa.me/5521982519042?text='
-    encodeURIComponent(str);
+    window.location.href = `https://wa.me/5521982519042?text=${mensagem}`
+    
 }
