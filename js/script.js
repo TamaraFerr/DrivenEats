@@ -8,9 +8,6 @@ const formataMoeda = new Intl.NumberFormat('pt-BR', {
   
 });
 
-let clienteNome = prompt("Seu nome, por favor:");
-let clienteEndereço = prompt("Agora, seu endereço:");
-
 //seleciona o item do pedido e marca com a borda e check, verifica cada categoria clicada.
 function selecionaCard(el) {
     let categoria = el.dataset.test;
