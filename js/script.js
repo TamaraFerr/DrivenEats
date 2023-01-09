@@ -1,8 +1,6 @@
 let comida = null
 let bebida = null
 let sobremesa = null
-let nome = null;
-let endereço = null;
 
 const formataMoeda = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -48,12 +46,12 @@ function podePedir() {
 }
 //envia a mensagem de confirmação de pedido pelo whatsapp e adiciona o prompt de nome e endereço ao pedido.
 function mandaPedido() {
-    nome = prompt("Seu nome:");
-    endereço = prompt("Seu endereço:");
+    let nome = prompt("Seu nome:");
+    let endereço = prompt("Seu endereço:");
     let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido: 
--Prato: ${comida.children[1].children[0].innerHTML}
--Bebida: ${bebida.children[1].children[0].innerHTML}
--Sobremesa: ${sobremesa.children[1].children[0].innerHTML}
+- Prato: ${comida.children[1].children[0].innerHTML}
+- Bebida: ${bebida.children[1].children[0].innerHTML}
+- Sobremesa: ${sobremesa.children[1].children[0].innerHTML}
 Total: ${totalPedido()}
     
 Nome: ${nome}
