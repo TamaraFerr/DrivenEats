@@ -8,6 +8,9 @@ const formataMoeda = new Intl.NumberFormat('pt-BR', {
   
 });
 
+let clienteNome = prompt("Seu nome, por favor:");
+let clienteEndereço = prompt("Agora, seu endereço:");
+
 //seleciona o item do pedido e marca com a borda e check, verifica cada categoria clicada.
 function selecionaCard(el) {
     let categoria = el.dataset.test;
@@ -44,19 +47,19 @@ function podePedir() {
        botao.innerHTML = "Fechar pedido";
     }
 }
-//envia a mensagem de confirmação de pedido pelo whatsapp
+//envia a mensagem de confirmação de pedido pelo whatsapp e adiciona o prompt de nome e endereço ao pedido.
 function mandaPedido() {
     let nome = prompt("Seu nome, por favor:");
     let endereço = prompt("Agora, seu endereço:");
     let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido: 
-    - Prato: ${comida.children[1].children[0].innerHTML}
-    - Bebida: ${bebida.children[1].children[0].innerHTML}
-    - Sobremesa: ${sobremesa.children[1].children[0].innerHTML}
-    Total: ${totalPedido()}
+-Prato: ${comida.children[1].children[0].innerHTML}
+-Bebida: ${bebida.children[1].children[0].innerHTML}
+-Sobremesa: ${sobremesa.children[1].children[0].innerHTML}
+Total: ${totalPedido()}
     
-    Nome: ${nome}
-    Endereço: ${endereço}`);
-    window.location.href = `https://wa.me/5521982519042?text=${mensagem}`
+Nome: ${nome}
+Endereço: ${endereço}`);
+    window.location.href = `https://wa.me/5555555555555?text=${mensagem}`
     
 }
 
