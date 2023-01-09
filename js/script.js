@@ -1,11 +1,13 @@
 let comida = null
 let bebida = null
 let sobremesa = null
+let nome = null;
+let endereço = null;
 
 const formataMoeda = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-  
+
 });
 
 //seleciona o item do pedido e marca com a borda e check, verifica cada categoria clicada.
@@ -46,8 +48,8 @@ function podePedir() {
 }
 //envia a mensagem de confirmação de pedido pelo whatsapp e adiciona o prompt de nome e endereço ao pedido.
 function mandaPedido() {
-    let nome = prompt("Seu nome, por favor:");
-    let endereço = prompt("Agora, seu endereço:");
+    nome = prompt("Seu nome:");
+    endereço = prompt("Seu endereço:");
     let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido: 
 -Prato: ${comida.children[1].children[0].innerHTML}
 -Bebida: ${bebida.children[1].children[0].innerHTML}
