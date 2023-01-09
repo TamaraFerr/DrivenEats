@@ -46,12 +46,16 @@ function podePedir() {
 }
 //envia a mensagem de confirmação de pedido pelo whatsapp
 function mandaPedido() {
-    
+    let nome = prompt("Seu nome, por favor:");
+    let endereço = prompt("Agora, seu endereço:");
     let mensagem = encodeURIComponent(`Olá, gostaria de fazer o pedido: 
     - Prato: ${comida.children[1].children[0].innerHTML}
     - Bebida: ${bebida.children[1].children[0].innerHTML}
     - Sobremesa: ${sobremesa.children[1].children[0].innerHTML}
-    Total: ${totalPedido()}`);
+    Total: ${totalPedido()}
+    
+    Nome: ${nome}
+    Endereço: ${endereço}`);
     window.location.href = `https://wa.me/5521982519042?text=${mensagem}`
     
 }
