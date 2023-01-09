@@ -378,7 +378,7 @@
     </footer>  
     
     <div class="modal-pedidos" id="modal-confirmacao">
-        <div class="pedidos">
+        <div class="pedidos" data-test="confirm-order-modal">
             <p>Confirme seu pedido</p>
             <ul class="itens">
                 <li id="confirma-comida"></li>
@@ -387,8 +387,8 @@
                 <li id="valor-total" class="total-pedidos"></li>
             </ul>
 
-            <button type="button" class="botao-1" data-test="order-btn" onclick="pedidoWhatsapp()">Tudo certo, pode pedir!</button>
-            <button type="button" class="botao-2" data-test="order-btn" onclick="fechaModal()">Cancelar</button>
+            <button type="button" class="botao-1" data-test="order-btn" data-test="confirm-order-btn" onclick="pedidoWhatsapp()">Tudo certo, pode pedir!</button>
+            <button type="button" class="botao-2" data-test="order-btn" data-test="cancel-order-btn" onclick="fechaModal()">Cancelar</button>
         </div>
     </div>
 
